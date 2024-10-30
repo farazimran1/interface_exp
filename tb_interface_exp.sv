@@ -1,11 +1,12 @@
 module tb_interface_exp #(
   parameter int MUX_1_DATA_WITH = 8
 ) (
-  input logic [7:0] i_a,
-  input logic [7:0] i_b,
-  input logic       i_sel,
+  input logic [MUX_1_DATA_WITH-1:0] i_a,
+  input logic [MUX_1_DATA_WITH-1:0] i_b,
+  input logic                       i_sel,
 
-  output logic [7:0] o_y
+  output logic [MUX_1_DATA_WITH-1:0] o_y_0,
+  output logic [MUX_1_DATA_WITH-1:0] o_y_1
 );
 
   mux2to1 #(
@@ -14,7 +15,7 @@ module tb_interface_exp #(
     .i_a  (i_a),
     .i_b  (i_b),
     .i_sel(i_sel),
-    .o_y  (o_y)
+    .o_y  (o_y_0)
   );
 
   mux2to1 #(
@@ -23,7 +24,7 @@ module tb_interface_exp #(
     .i_a  (~i_a),
     .i_b  (~i_b),
     .i_sel(~i_sel),
-    .o_y  (o_y)
+    .o_y  (o_y_1)
   );
 
   initial begin
