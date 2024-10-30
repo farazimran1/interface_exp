@@ -3,7 +3,7 @@ import utils
 
 
 @cocotb.test()
-async def mux2to1_test(dut):
+async def interface_exp_test(dut):
     dut.i_a.value = 0xA7
     dut.i_b.value = 0xB8
     dut.i_sel.value = 1

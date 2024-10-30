@@ -1,4 +1,4 @@
-module tb_mux2to1 (
+module tb_interface_exp (
   input logic [7:0] i_a,
   input logic [7:0] i_b,
   input logic       i_sel,
@@ -6,7 +6,7 @@ module tb_mux2to1 (
   output logic [7:0] o_y
 );
 
-  mux2to1 dut (
+  interface_exp dut (
     .i_a  (i_a),
     .i_b  (i_b),
     .i_sel(i_sel),

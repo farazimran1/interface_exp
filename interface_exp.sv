@@ -1,4 +1,4 @@
-module mux2to1 (
+module interface_exp (
   input logic [7:0] i_a,
   input logic [7:0] i_b,
   input logic       i_sel,
