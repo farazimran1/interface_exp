@@ -3,16 +3,16 @@
 SIM ?= questa
 TOPLEVEL_LANG ?= verilog
 
-VERILOG_SOURCES = mux2to1.sv tb_mux2to1.sv
+VERILOG_SOURCES = interface_exp.sv tb_interface_exp.sv
 
 # enable waveform dumping
 WAVES = 1
 
 # TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
-TOPLEVEL = tb_mux2to1
+TOPLEVEL = tb_interface_exp
 
 # MODULE is the basename of the Python test file
-MODULE = test_mux2to1
+MODULE = test_interface_exp
 
 # include cocotb's make rules to take care of the simulator setup
 include $(shell cocotb-config --makefiles)/Makefile.sim
