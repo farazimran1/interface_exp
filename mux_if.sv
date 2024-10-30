@@ -9,4 +9,4 @@ interface mux_if #(
   modport master_ports(output i_a, output i_b, output i_sel, input o_y);
   modport slave_ports(input i_a, input i_b, input i_sel, output o_y);
 
-endinterface : mux_intf
+endinterface
