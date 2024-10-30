@@ -1,5 +1,5 @@
 module tb_interface_exp #(
-  parameter int MUX_0_DATA_WITH = 8,
+  parameter int MUX_0_DATA_WITH = 12,
   parameter int MUX_1_DATA_WITH = 4
 ) (
   input logic [MUX_0_DATA_WITH-1:0] i_a,
@@ -29,8 +29,8 @@ module tb_interface_exp #(
   if_master #(
     .DATA_WITH(MUX_1_DATA_WITH)
   ) master1 (
-    .i_a      (i_a[MUX_1_DATA_WITH-1:0]),
-    .i_b      (i_b[MUX_1_DATA_WITH-1:0]),
+    .i_a      (i_a[7:4]),
+    .i_b      (i_b[7:4]),
     .i_sel    (i_sel),
     .o_y      (o_y_1),
     .master_if(mux1_if)
