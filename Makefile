@@ -3,7 +3,7 @@
 SIM ?= questa
 TOPLEVEL_LANG ?= verilog
 
-VERILOG_SOURCES = mux2to1.sv mux_if.sv if_master.sv tb_interface_exp.sv
+VERILOG_SOURCES = mux2to1.sv mux_if.sv if_master.sv mux2to1_wrapper.sv tb_interface_exp.sv
 
 # enable waveform dumping
 WAVES = 1
