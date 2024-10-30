@@ -13,8 +13,8 @@ module tb_interface_exp #(
   mux_if #(.DATA_WITH(MUX_0_DATA_WITH)) mux0_if ();
   mux_if #(.DATA_WITH(MUX_1_DATA_WITH)) mux1_if ();
 
-  mux2to1 mux0 (.slave_if(mux0_if));
-  mux2to1 mux1 (.slave_if(mux1_if));
+  mux2to1_wrapper mux0 (.slave_if(mux0_if));
+  mux2to1_wrapper mux1 (.slave_if(mux1_if));
 
   if_master #(
     .DATA_WITH(MUX_0_DATA_WITH)
