@@ -1,13 +1,7 @@
-module mux2to1 #(
-  parameter int DATA_WIDTH = 8
-) (
-  input logic [DATA_WIDTH-1:0] i_a,
-  input logic [DATA_WIDTH-1:0] i_b,
-  input logic                  i_sel,
-
-  output logic [DATA_WIDTH-1:0] o_y
+module mux2to1 (
+  mux_if.slave_ports slave_if
 );
 
-  assign o_y = i_sel ? i_b : i_a;
+  assign slave_if.o_y = slave_if.i_sel ? slave_if.i_b : slave_if.i_a;
 
 endmodule
